@@ -11,11 +11,14 @@ def score_input(test_name, test_score=0, invalid_message="Invalid test score, tr
   :param invalid_message: this displays if user inputs the incorrect number
   :returns: the test_name and test_score concatenated together
   """
-  if test_score < 0 or test_score > 100:
-    return invalid_message
-  else:
-    # return {test_name: test_score}
-    return test_name + ": " + str(test_score)
+  try:
+    if test_score < 0 or test_score > 100:
+      return invalid_message
+    else:
+      # return {test_name: test_score}
+      return test_name + ": " + str(test_score)
+  except:
+    return ValueError
 
 
 if __name__ == "__main__":
