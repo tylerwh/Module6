@@ -12,7 +12,7 @@ def score_input(test_name, test_score=0, invalid_message="Invalid test score, tr
   :returns: the test_name and test_score concatenated together
   """
   # return {test_name: test_score}
-  pass
+  return test_name + ": " + str(test_score)
 
 
 if __name__ == "__main__":
